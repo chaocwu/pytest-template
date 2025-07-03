@@ -1,6 +1,9 @@
 name: Run pytest and publish Allure report
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:
