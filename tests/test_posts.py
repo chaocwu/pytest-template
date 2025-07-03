@@ -1,6 +1,6 @@
 import allure
 
-from jsonplaceholder.posts import PostsAPI, PostsValidator
+from jsonplaceholder.pages.posts import PostsAPI, PostsValidator
 
 
 @allure.title("test jsonplaceholder posts list")
