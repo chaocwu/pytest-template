@@ -1,3 +1,5 @@
+import json
+
 import allure
 import requests
 from loguru import logger
@@ -13,14 +15,14 @@ class PostsAPI:
     def get_posts(self) -> list[dict]:
         response = requests.get(URL).json()
         logger.info(response)
-        allure.attach(response, allure.attachment_type.JSON)
+        allure.attach(json.dumps(response), allure.attachment_type.JSON)
         return response
 
     @allure.step("get jsonplaceholder post by id")
     def get_post_by_id(self, id: int) -> dict:
         response = requests.get(URL + f"/{id}").json()
         logger.info(response)
-        allure.attach(response, allure.attachment_type.JSON)
+        allure.attach(json.dumps(response), allure.attachment_type.JSON)
         return response
 
 
