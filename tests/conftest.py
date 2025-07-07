@@ -14,7 +14,6 @@ def config():
     base_url = os.getenv("GITCODE_BASE_URL")
     owner = os.getenv("GITCODE_PERSONAL_OWNER")
     token = os.getenv("GITCODE_PERSONAL_ACCESS_TOKEN")
-    logger.info(f"Env vars: {base_url}, {owner}, {token}")
     assert base_url and owner and token, "environment variables must be set."
     conf = GitCodeConfig(
         base_url=base_url,
