@@ -5,6 +5,11 @@ on:
     branches:
       - master
 
+env:
+  GITCODE_BASE_URL: "https://api.gitcode.com/api/v5"
+  GITCODE_PERSONAL_ACCESS_TOKEN: ${{ secrets.GITCODE_PERSONAL_ACCESS_TOKEN }}
+  GITCODE_PERSONAL_OWNER: "chaocw"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -24,10 +29,6 @@ jobs:
 
       - name: Run tests
         run: uv run pytest tests --alluredir=allure-results
-        env:
-          GITCODE_BASE_URL: ${{ env.GITCODE_BASE_URL }}
-          GITCODE_PERSONAL_ACCESS_TOKEN: ${{ env.GITCODE_PERSONAL_ACCESS_TOKEN }}
-          GITCODE_PERSONAL_OWNER: ${{ env.GITCODE_PERSONAL_OWNER }}
 
       - name: Load test report history
         uses: actions/checkout@v3
