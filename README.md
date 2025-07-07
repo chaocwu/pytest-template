@@ -50,3 +50,8 @@ pytest tests/test_mod.py::TestClass::test_method
 pytest -k 'MyClass and not method'
 pytest -m slow
 ```
+
+```bash
+find . -type f -name "*.Identifier" -exec rm -f {} +
+uv run --env-file .env.local pytest tests/test_tag.py -v
+```

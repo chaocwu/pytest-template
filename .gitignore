@@ -14,3 +14,5 @@ wheels/
 # Allure reports
 allure-results/
 allure-report/
+
+.env.local
