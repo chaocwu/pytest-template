@@ -1,0 +1,23 @@
+{
+    "id": 6296394,
+    "full_name": "chaocw/1751890762191",
+    "human_name": "chaocw / 1751890762191",
+    "url": "https://api.gitcode.com/api/v5/repos/chaocw/1751890762191",
+    "namespace": {
+        "id": 2186397,
+        "name": "chaocw",
+        "path": "chaocw",
+        "develop_mode": "normal",
+        "kind": "user",
+        "full_path": "chaocw",
+        "full_name": "chaocw",
+        "visibility_level": 20,
+        "enable_file_control": false,
+        "owner_id": 890137
+    },
+    "path": "1751890762191",
+    "name": "1751890762191",
+    "private": false,
+    "public": true,
+    "visibility": "public"
+}

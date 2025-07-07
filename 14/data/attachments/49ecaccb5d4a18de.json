@@ -1,0 +1,15 @@
+[
+    {
+        "name": "v1.0.0",
+        "message": "version 1.0\n",
+        "commit": {
+            "sha": "b5e076dcf90e61db08f288abc4fb34b141377d93",
+            "date": "2025-07-07T12:19:26.000Z"
+        },
+        "tagger": {
+            "name": "chaocw",
+            "email": "chaoc.w@outlook.com",
+            "date": "2025-07-07T12:19:26.000Z"
+        }
+    }
+]
