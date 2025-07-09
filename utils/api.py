@@ -51,32 +51,33 @@ class GitCodeAPI:
 
         logger.info(f"{prefix} status_code: {response.status_code}")
 
+        attachement = {
+            "name": prefix,
+            "status_code": response.status_code,
+            "request": None,
+            "reponse": None,
+        }
+
         if "json" in kwargs:
-            allure.attach(
-                json.dumps(kwargs["json"], indent=4),
-                name=f"{method} {url} - Request Body",
-                attachment_type=allure.attachment_type.JSON,
-            )
+            attachement["request"] = kwargs["json"]
         elif "data" in kwargs:
-            allure.attach(
-                str(kwargs["data"]),
-                name=f"{method} {url} - Request Body",
-                attachment_type=allure.attachment_type.TEXT,
-            )
+            attachement["request"] = kwargs["data"]
 
         try:
             data = response.json()
+            attachement["reponse"] = data
             allure.attach(
-                json.dumps(data, indent=4),
-                name=f"{prefix} - Response Body",
+                json.dumps(attachement, indent=4),
+                name=attachement["name"],
                 attachment_type=allure.attachment_type.JSON,
             )
             return data
         except json.JSONDecodeError as e:
             logger.warning(f"{prefix} JSON parse error: {e}")
+            attachement["reponse"] = response.text
             allure.attach(
-                response.text,
-                name=f"{prefix} - Response Body",
-                attachment_type=allure.attachment_type.TEXT,
+                json.dumps(attachement, indent=4),
+                name=attachement["name"],
+                attachment_type=allure.attachment_type.JSON,
             )
         return response

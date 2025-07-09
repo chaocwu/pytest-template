@@ -7,10 +7,6 @@ def test_passed():
     assert True
 
 
-def test_failed():
-    assert random.choice([True, False]), "This test passed or failed randomly"
-
-
 @pytest.mark.skip(reason="This test is skipped")
 def test_skipped():
     assert True
