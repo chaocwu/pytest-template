@@ -1,0 +1,11 @@
+{
+    "name": "[GET] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697",
+    "status_code": 400,
+    "request": null,
+    "reponse": {
+        "error_code": 404,
+        "error_code_name": "UN_KNOW",
+        "error_message": "Project not found:chaocw/1752075551697",
+        "trace_id": "fcefd1d983e5405bfed7f26949562184"
+    }
+}

@@ -1,0 +1,9 @@
+2025-07-09 15:39:11.697 | INFO     | tests.conftest:config:23 - GitCodeConfig(base_url='https://api.gitcode.com/api/v5', owner='chaocw', access_token='nhmXJzPdUsy_ECyvRD2aABqB')
+2025-07-09 15:39:12.943 | INFO     | utils.api:_request:52 - [GET] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697 status_code: 400
+2025-07-09 15:39:16.607 | INFO     | utils.api:_request:52 - [POST] https://api.gitcode.com/api/v5/user/repos status_code: 200
+2025-07-09 15:39:18.151 | INFO     | utils.api:_request:52 - [GET] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697/tags status_code: 201
+2025-07-09 15:39:20.205 | INFO     | utils.api:_request:52 - [POST] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697/tags status_code: 201
+2025-07-09 15:39:20.602 | INFO     | utils.api:_request:52 - [GET] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697/tags status_code: 201
+2025-07-09 15:39:20.958 | INFO     | utils.api:_request:52 - [GET] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697 status_code: 200
+2025-07-09 15:39:21.580 | INFO     | utils.api:_request:52 - [DELETE] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697 status_code: 204
+2025-07-09 15:39:21.580 | WARNING  | utils.api:_request:76 - [DELETE] https://api.gitcode.com/api/v5/repos/chaocw/1752075551697 JSON parse error: Expecting value: line 1 column 1 (char 0)
