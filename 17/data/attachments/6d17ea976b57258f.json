@@ -1,0 +1,32 @@
+{
+    "name": "[POST] https://api.gitcode.com/api/v5/user/repos",
+    "status_code": 200,
+    "request": {
+        "name": "1752080049510",
+        "gitignore_template": "JavaScript",
+        "license_template": "MulanPSL-2.0"
+    },
+    "reponse": {
+        "id": 6453879,
+        "full_name": "chaocw/1752080049510",
+        "human_name": "chaocw / 1752080049510",
+        "url": "https://api.gitcode.com/api/v5/repos/chaocw/1752080049510",
+        "namespace": {
+            "id": 2186397,
+            "name": "chaocw",
+            "path": "chaocw",
+            "develop_mode": "normal",
+            "kind": "user",
+            "full_path": "chaocw",
+            "full_name": "chaocw",
+            "visibility_level": 20,
+            "enable_file_control": false,
+            "owner_id": 890137
+        },
+        "path": "1752080049510",
+        "name": "1752080049510",
+        "private": false,
+        "public": true,
+        "visibility": "public"
+    }
+}

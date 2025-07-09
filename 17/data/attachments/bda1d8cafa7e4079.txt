@@ -1,0 +1,1 @@
+2025-07-09 16:54:21.159 | INFO     | utils.api:_request:52 - [GET] https://api.gitcode.com/api/v5/repos/chaocw/xxx status_code: 400
