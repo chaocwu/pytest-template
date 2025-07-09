@@ -1,0 +1,20 @@
+{
+    "name": "[GET] https://api.gitcode.com/api/v5/repos/chaocw/1752042007976/tags",
+    "status_code": 201,
+    "request": null,
+    "reponse": [
+        {
+            "name": "v1.0.0",
+            "message": "version 1.0\n",
+            "commit": {
+                "sha": "9e80d881eb575e83974335ffaac9137c976ce940",
+                "date": "2025-07-09T06:20:12.000Z"
+            },
+            "tagger": {
+                "name": "chaocw",
+                "email": "chaoc.w@outlook.com",
+                "date": "2025-07-09T06:20:12.000Z"
+            }
+        }
+    ]
+}
