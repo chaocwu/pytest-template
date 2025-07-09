@@ -22,7 +22,7 @@ def test_create_tag_under_repo(config, repo):
         assert response.get("name") == data.tag_name, response
     with allure.step("check tag name and message"):
         response = tag.list_repo_tags(params)
-        assert len(response) == 0, response
+        assert len(response) > 0, response
         for item in response:
             assert isinstance(item, dict), item
             if item.get("name") == data.tag_name:

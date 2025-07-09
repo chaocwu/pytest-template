@@ -1,5 +1,4 @@
-import random
-
+import allure
 import pytest
 
 
@@ -16,5 +15,31 @@ def test_broken():
     raise Exception("This test is broken")
 
 
-def probabilistic_success(success_rate: float) -> bool:
-    return random.random() < success_rate
+@allure.title("This is a step failed_fixture")
+@pytest.fixture(scope="function")
+def setup_failed_fixture():
+    raise Exception("This fixture is broken")
+
+
+@allure.title("This test fixture setup is broken")
+def test_failed_fixture_setup(failed_fixture):
+    with allure.step("This is a step"):
+        assert True
+
+
+@allure.title("This is a step teardown_fixture")
+@pytest.fixture(scope="function")
+def teardown_fixture():
+    yield True
+    raise Exception("This fixture is broken")
+
+
+@allure.title("This test fixture teardown is broken")
+def test_failed_fixture_teardown(teardown_fixture):
+    with allure.step("This is a step"):
+        assert True
+    with allure.step("This is a step"):
+        with allure.step("This is a step"):
+            assert True
+        with allure.step("This is a step"):
+            assert teardown_fixture
